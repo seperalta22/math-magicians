@@ -1,3 +1,26 @@
 .app {
   text-align: center;
 }
+
+.calculator {
+  width: 40rem;
+  margin: 3rem auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.calculator-display {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  text-align: right;
+  background: #eee;
+  border: 1px solid #ccc;
+}
