@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import buttons from '../logic/buttons';
 import calculate from '../logic/calculate';
+import Button from './Button';
 
 function Calculator() {
   const [calculation, setCalculation] = useState({
@@ -26,14 +27,12 @@ function Calculator() {
       />
       <div className="calculator-buttons">
         {buttons.map((button) => (
-          <button
-            type="button"
+          <Button
             key={button.name}
-            className={`${button.className} ${button.color}`}
+            className={button.className}
             onClick={handleClick}
-          >
-            {button.name}
-          </button>
+            name={button.name}
+          />
         ))}
       </div>
     </div>
