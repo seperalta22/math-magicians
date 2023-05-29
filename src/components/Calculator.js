@@ -1,39 +1,39 @@
+import { useState } from 'react';
+import buttons from '../logic/buttons';
+import calculate from '../logic/calculate';
+import Button from './Button';
+
 function Calculator() {
+  const [calculation, setCalculation] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
+
+  const handleClick = (e) => {
+    setCalculation(calculate(calculation, e.target.textContent));
+  };
+
+  const { total, next } = calculation;
+  const display = next || total || '0';
+
   return (
     <div className="calculator">
-      <input type="text" className="calculator-display" readOnly />
+      <input
+        type="text"
+        className="calculator-display"
+        value={display}
+        readOnly
+      />
       <div className="calculator-buttons">
-        <button type="button">AC</button>
-        <button type="button">+/-</button>
-        <button type="button">%</button>
-        <button type="button" id="orange">
-          ÷
-        </button>
-        <button type="button">7</button>
-        <button type="button">8</button>
-        <button type="button">9</button>
-        <button type="button" id="orange">
-          x
-        </button>
-        <button type="button">4</button>
-        <button type="button">5</button>
-        <button type="button">6</button>
-        <button type="button" id="orange">
-          -
-        </button>
-        <button type="button">1</button>
-        <button type="button">2</button>
-        <button type="button">3</button>
-        <button type="button" id="orange">
-          +
-        </button>
-        <button type="button" className="btn0">
-          0
-        </button>
-        <button type="button">.</button>
-        <button type="button" id="orange">
-          =
-        </button>
+        {buttons.map((button) => (
+          <Button
+            key={button.name}
+            className={button.className}
+            onClick={handleClick}
+            name={button.name}
+          />
+        ))}
       </div>
     </div>
   );
