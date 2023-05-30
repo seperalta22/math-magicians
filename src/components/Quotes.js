@@ -8,7 +8,7 @@ function Quotes() {
   // usually I would put this in a .env file but I'm not sure
   // if the reviewer will be able to see it.
   const API_ID = 'dByEAwV9LJFlCKUgjAX60A==fvZH8LP91QrzRc6I';
-  const URL = 'https://api.api-ninjas.com/v1/quotes2';
+  const URL = 'https://api.api-ninjas.com/v1/quotes';
 
   useEffect(() => {
     const fetchQuote = async () => {
