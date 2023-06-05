@@ -3,11 +3,16 @@ import App from '../App';
 import CalculatorPage from '../pages/CalculatorPage';
 import QuotePage from '../pages/QuotePage';
 import NotFoundPage from '../pages/NotFoundPage';
+import Layout from '../layout/Layout';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: (
+      <Layout>
+        <App />
+      </Layout>
+    ),
   },
   {
     path: '/Calculator',
