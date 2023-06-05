@@ -4,12 +4,11 @@
   flex-direction: column;
   gap: 3rem;
   padding: 2rem;
-  background-color: #f5913e;
+  background-color: #f5903e72;
 }
 
 .calculator {
   width: 35rem;
-  margin: 3rem auto;
 }
 
 .calculator-buttons {
