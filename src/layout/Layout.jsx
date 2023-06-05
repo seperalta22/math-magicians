@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
+import Header from '../components/Header';
 
 const Layout = ({ children }) => (
   <>
-    Layout
+    <Header />
     {children}
   </>
 );
