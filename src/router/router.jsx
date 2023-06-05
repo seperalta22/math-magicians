@@ -16,11 +16,19 @@ const router = createBrowserRouter([
   },
   {
     path: '/Calculator',
-    element: <CalculatorPage />,
+    element: (
+      <Layout>
+        <CalculatorPage />
+      </Layout>
+    ),
   },
   {
     path: '/quote',
-    element: <QuotePage />,
+    element: (
+      <Layout>
+        <QuotePage />
+      </Layout>
+    ),
   },
   {
     path: '*',
