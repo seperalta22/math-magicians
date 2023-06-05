@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import '../styles/Header.module.css';
 
 const Header = () => (
   <header>
@@ -6,13 +7,28 @@ const Header = () => (
     <nav>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink
+            to="/"
+            style={({ isActive }) => ({ color: isActive ? '#f5913e' : '' })}
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to="/calculator">Calculator</Link>
+          <NavLink
+            to="/calculator"
+            style={({ isActive }) => ({ color: isActive ? '#f5913e' : '' })}
+          >
+            Calculator
+          </NavLink>
         </li>
         <li>
-          <Link to="/quote">Quote</Link>
+          <NavLink
+            to="/quote"
+            style={({ isActive }) => ({ color: isActive ? '#f5913e' : '' })}
+          >
+            Quote
+          </NavLink>
         </li>
       </ul>
     </nav>
