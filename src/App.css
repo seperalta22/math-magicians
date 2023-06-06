@@ -1,10 +1,14 @@
 .app {
-  text-align: center;
+  height: 86vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+  background-color: #f5903e72;
 }
 
 .calculator {
   width: 35rem;
-  margin: 3rem auto;
 }
 
 .calculator-buttons {
@@ -65,4 +69,9 @@
   background: #f5913e;
   color: #fff;
   font-size: 1.5rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
 }
